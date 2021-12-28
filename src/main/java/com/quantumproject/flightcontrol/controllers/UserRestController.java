@@ -23,6 +23,6 @@ public class UserRestController {
         boolean result = flyingManagerService.isAvailableTicket(id);
         return result == Boolean.TRUE
                 ? new ResponseEntity(result, HttpStatus.OK) :
-                new ResponseEntity<>(HttpStatus.NOT_FOUND);
+                new ResponseEntity<>(result, HttpStatus.NOT_FOUND);
     }
 }
